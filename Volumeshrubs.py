@@ -33,9 +33,9 @@ def calculateVolume(path_raster,minElev):
     return(volume,area)
 
 
-if __name__=='__main__' :
+#if __name__=='__main__' :
    
-    path_raster='E:/test16012022/20m/clippedbush.tif'
-    print(calculateVolume(path_raster, 0))
+ #   path_raster='E:/test16012022/20m/clippedbush.tif'
+  #  print(calculateVolume(path_raster, 0))
     
     

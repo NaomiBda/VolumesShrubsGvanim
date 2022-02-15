@@ -5,6 +5,21 @@ import json
 import os
 
 def clip (inShp,path_raster, inRaster):
+    '''
+    
+
+    Parameters
+    ----------
+    inShp : shapefile containing the polygons of shrubs :str ('D:/path/shapefiles/polygons.shp')
+    path_raster : path to the raster : str ('D:/path/rasters/')
+    inRaster : raster name : str ('raster.tif')
+
+    Returns
+    -------
+    creates a new folder in the folder of the raster containing all the new clipped polygons with their ID name
+
+    '''
+    #creating the new folder
     newpath = path_raster+'polygons_'+inRaster[:-4]+'/'
         
     if not os.path.exists(newpath):
@@ -29,10 +44,7 @@ def clip (inShp,path_raster, inRaster):
                     outds.write(masked[i,:,:],i+1)
                     
 if __name__=='__main__' :
-    #inShp = "/Volumes/My Passport/TempNaomi/Donnees/Shapefiles/2018/Yield9Plots_4326_Full.shp"
-    #path_raster  ="/Volumes/My Passport/TempNaomi/Donnees/Drone/2018/Niakhar/2018_10_08/"
-    #inRaster="orthoRGB_2018-10-08_georeferenced.tif"
-    #annee='2018'
+    
     inShp = "/Volumes/NAOMI/test13012022/cliptovolume.shp"
     path_raster  ="/Volumes/NAOMI/test16012022/20m/"
     inRaster= "height-20mCropped.tif"

@@ -3,7 +3,7 @@ scripts to calculate the volume of shrubs using drone rasters of the area
 
 ## Before running the script
 
-You may install the follwing packages : 
+You may install the following packages : 
 * rasterio (reads raster) 
 * geopandas (reads shapefiles) 
 
@@ -35,3 +35,5 @@ shapefile_path='D:/Gvanim/shapefiles/shrubs-SOUTH5.shp'
 
 
 ## Output
+
+The Output is the creation of a CSV file next to the raster containing the volume values for each shrubs.
